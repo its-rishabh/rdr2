@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
-import RgFontTTF from './fonts/RgFont.ttf'
 
 function Navbar() {
   return (
     <Bar>
-        NavBar
-        <Purchase><NavLink href="/" target="_blank">BUY NOW</NavLink></Purchase>
+        <Title>RED DEAD REDEMPTION 2</Title>
+        <Purchase href="/" target="_blank"><NavLink>BUY NOW</NavLink></Purchase>
     </Bar>
   )
 }
@@ -20,33 +19,49 @@ const Bar = styled.div`
     width: 100%;
     height: 40px;
     background-color: black;
+    z-index: 1;
 `;
 
-const Purchase = styled.button`
+const Title = styled.div`
     display: flex;
     align-items: center;
-    color: black;
+    color: #ffffff;
     margin: none;
-    background-color: #ee0000;
     border: none;
     padding: 20px;
-    margin: 1px;
-    @font-face {
-        font-family: 'RgFont';
-        src: url(${RgFontTTF}) format('truetype');
+    font-size: 25px;
+    transition: 450ms;
+    &:hover {
+        color: #ee0000;
+        cursor: pointer;
     }
 `;
 
-const NavLink = styled.a`
+const Purchase = styled.a`
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: #ee0000;
+    // background: url{require('./images/order_btn_background.png')} no-repeat;
+    
+    border: none;
+    padding: 0 20px;
+    margin: 1px;
+
     text-decoration: none;
     color: black;
     font-size: 25px;
     font-weight: bold;
-    padding: 0 15px;
+
+    transition: 450ms;
     &:hover {
         color: white;
-        
+        cursor: pointer;
     }
+`;
+
+const NavLink = styled.div`
+    padding: 0 15px;
 `;
 
 export default Navbar;

@@ -9,28 +9,28 @@ function Features() {
         </Heading>
         <CharacterProfile>
             <Image>
-                <Img src={require("./images/illustration_image_1.png")} alt="Arthur Morgan" />
-                <h4>Arthur Morgan</h4>
+                <Img src={require("./images/Wildlife.jpg")} alt="Arthur Morgan" />
+                <H4><h2>WILDLIFE</h2></H4>
             </Image>
             <Image>
                 <Img src={require("./images/illustration_image_2.png")} alt="Sadie Adler" />
-                <h4>Sadie Adler</h4>
+                <H4><h2>WEAPONRY</h2></H4>
             </Image>
             <Image>
                 <Img src={require("./images/illustration_image_3.png")} alt="John Marston" />
-                <h4>John Marston</h4>
+                <H4><h2>RED DEAD ONLINE</h2></H4>
             </Image>
-            <Image>
-                <Img src={require("./images/illustration_image_4.png")} alt="Abigail Roberts" />
-                <h4>Abigail Roberts</h4>
-            </Image>
+            <Image1 href="https://youtu.be/eaW0tYpxyp0" target="_blank">
+                <Img src={require("./images/GameplayVideo.jpg")} alt="Abigail Roberts" />
+                <H4><h2>GAMEPLAY VIDEO</h2></H4>
+            </Image1>
         </CharacterProfile>
     </Part5>
   )
 }
 
 const Part5 = styled.div`
-    border: 5px;
+    // border: 5px;
     color: #ffffff;
     padding: 15px;
 `;
@@ -43,8 +43,7 @@ const Heading = styled.header`
 `;
 
 const CharacterProfile = styled.div`
-    border: 5px;
-    // border-color: aliceblue;
+    flex-wrap: wrap;
     margin: 5px;
     display: flex;
     justify-content: space-around;
@@ -53,9 +52,22 @@ const CharacterProfile = styled.div`
 
 const Image = styled.div`
     padding: 5px;
-    border: 5px solid #3882f6;
+    // border: 5px solid #3882f6;
     border-radius: 20px;
-    
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;    
+`;
+
+const Image1 = styled.a`
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    // border: 5px solid #3882f6;
+    border-radius: 20px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +83,10 @@ const Img =styled.img`
     &:hover {
         transform: scale(1.18);
     }
+`;
+
+const H4 = styled.div`
+    margin-top: 25px;
 `;
 
 export default Features;

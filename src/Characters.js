@@ -9,17 +9,17 @@ function Characters() {
             <h1><b>Characters</b></h1>
         </Heading>
         <CharacterProfile>
-            <Image><Img src={require("./images/illustration_image_1.png")} alt="Arthur Morgan" />
-                <h4>ARTHUR MORGAN</h4>
+            <Image><Img src={require("./images/ArthurMorgan.jpg")} alt="Arthur Morgan" />
+                    <Name><h2>ARTHUR MORGAN</h2></Name>
             </Image>
             <Image><Img src={require("./images/illustration_image_2.png")} alt="Sadie Adler" />
-                <h4>SADIE ADLER</h4>
+                     <Name><h2>SADIE ADLER</h2></Name>
             </Image>
             <Image><Img src={require("./images/illustration_image_3.png")} alt="John Marston" />
-                <h4>JOHN MARSTON</h4>
+                     <Name><h2>JOHN MARSTON</h2></Name>
             </Image>
             <Image><Img src={require("./images/illustration_image_4.png")} alt="Abigail Roberts" />
-                <h4>ABIGAIL ROBERTS</h4>
+                    <Name><h2>ABIGAIL ROBERTS</h2></Name>
             </Image>
         </CharacterProfile>
     </Part2>
@@ -40,8 +40,11 @@ const Heading = styled.div`
 `;
 
 const CharacterProfile = styled.div`
-    border: 5px;
-    border-color: aliceblue;
+    flex-wrap: wrap;
+    
+    // border: 5px;
+    // border-color: aliceblue;
+
     margin: 5px;
     display: flex;
     justify-content: space-around;
@@ -51,8 +54,9 @@ const CharacterProfile = styled.div`
 
 const Image = styled.div`
     padding: 5px;
-    border: 5px solid #3882f6;
-    border-radius: 20px;
+    // border: 5px solid #3882f6;
+    // border-radius: 20px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,6 +77,10 @@ const Img =styled.img`
     &:hover {
         transform: scale(1.18);
     }
+`;
+
+const Name = styled.div`
+    margin-top: 25px;
 `;
 
 export default Characters;

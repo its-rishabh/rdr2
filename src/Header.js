@@ -1,20 +1,17 @@
 import React from 'react'
 import './stylesheet.css';
 import styled from 'styled-components';
+import bg from './images/placeholder.png';
 
 function Header() {
   return (
-    <Part1>
+    <Part1 bgImg={bg}>
     <Heading>
         <Img src={require("./images/logo.png")} alt="RDR2 logo" />
-        <Links>
-            <div className="login"><a href="login.html">Login</a></div>
-            <Signup><a href="signup.html">SignUp</a></Signup>
-        </Links>
+        <div />
     </Heading>
     <Content>
         <div>
-            {/* <h1>RED DEAD REDEMPTION 2</h1> */}
             <p>America, 1899.<br />
                 Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and<br />
                 the best bounty hunters in the nation massing on their heels, the gang must rob, steal and<br />
@@ -23,7 +20,7 @@ function Header() {
                 own ideals and loyalty to the gang who raised him.</p>
         </div>
         <div>
-            <Img src={require("./images/placeholder.png")} alt="placeholder" />
+            <Img src={bg} alt="placeholder" />
         </div>
     </Content>
 </Part1>
@@ -33,6 +30,7 @@ function Header() {
 const Part1 = styled.div`
     margin-top: 40px;
     background-color: #1f2937;
+    // background: url($require{('./images/placeholder.png')}) no-repeat;
 `;
 
 const Heading = styled.div`
@@ -41,23 +39,14 @@ const Heading = styled.div`
     align-items: center;
 `;
 
-const Links = styled.div`
-    color: antiquewhite;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-`;
-
 const Content =styled.div`
     display: flex;
-    color: aliceblue;
+    color: #ffffff;
+    font-size: 15px;
     justify-content: space-around;
     align-items: center;
     image-resolution: 800px*auto;
-`;
-
-const Signup = styled.div`
-    margin-left: 25px;
+    flex-wrap: wrap;
 `;
 
 const Img =styled.img`
