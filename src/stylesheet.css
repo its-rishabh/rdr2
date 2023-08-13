@@ -1,0 +1,58 @@
+body {
+    background-color: #191C1F;
+}
+
+a[href="https://www.rockstargames.com/reddeadredemption2/order"] {
+    background-color: pink;
+    /* text-decoration: none; */
+    padding: 4px 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+a:link[href="https://www.rockstargames.com/reddeadredemption2/order"] {
+    color: red;
+}
+
+a:visited[href="https://www.rockstargames.com/reddeadredemption2/order"] {
+    color: grey;
+}
+
+a:hover[href="https://www.rockstargames.com/reddeadredemption2/order"] {
+    color: hsl(238, 100%, 50%);
+    text-decoration: none;
+}
+
+a:active[href="https://www.rockstargames.com/reddeadredemption2/order"] {
+    color: white;
+}
+
+a{
+    color: aqua;
+}
+
+a:hover[href="login.html"]{
+    text-decoration: none;
+    color: red;
+}
+
+a:active[href="login.html"] {
+    color: white;
+}
+
+a:visited[href="login.html"] {
+    color:grey;
+}
+
+a:hover[href="signup.html"]{
+    text-decoration: none;
+    color: red;
+}
+
+a:active[href="signup.html"] {
+    color: white;
+}
+
+a:visited[href="signup.html"] {
+    color:grey;
+}
