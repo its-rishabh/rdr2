@@ -44,7 +44,7 @@ function Characters() {
   )
 }
 
-const Part2 = styled.div`
+const Part2 = styled.section`
     padding: 15px;
     color: #ffffff;
     flex-wrap: wrap;
@@ -52,6 +52,7 @@ const Part2 = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 `;
 
 const Image = styled.div`

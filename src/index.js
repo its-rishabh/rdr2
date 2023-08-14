@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './stylesheet.css';
 import { createGlobalStyle } from 'styled-components';
 import RgFontTTF from './fonts/RgFont.ttf';
 import UniversCondensedTTF from './fonts/UniversCondensed.ttf'

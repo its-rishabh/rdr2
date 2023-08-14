@@ -1,93 +1,83 @@
 import React from 'react'
-import './stylesheet.css';
 import styled from 'styled-components';
 
 function Header() {
   return (
     <>
     <BgImage />
+    {/* <Join /> */}
     <ParaBg>
-        <Div>
         <Paragraph>
-            <p>America, 1899.<br />
-            Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and
-            the best bounty hunters in the nation massing on their heels, the gang must rob, steal and
-            fight their way across the rugged heartland of America in order to survive. As deepening
-            internal divisions threaten to tear the gang apart, Arthur must make a choice between his
-            own ideals and loyalty to the gang who raised him.</p>
+            <p>America, 1899. The end of the Wild West era has begun. After a robbery goes badly wrong in 
+            the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. 
+            With federal agents and the best bounty hunters in the nation massing on their heels, 
+            the gang must rob, steal and fight their way across the rugged heartland of America 
+            in order to survive. As deepening internal divisions threaten to tear the gang apart, 
+            Arthur must make a choice between his own ideals and loyalty to the gang who raised him.</p>
         </Paragraph>
-        </Div>
     </ParaBg>
     </>
   )
 }
 
-const BgImage = styled.div`
+const BgImage = styled.section`
     margin-top: 40px;
-
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-position: center;
-    background-size: cover;
+    overflow: hidden;
+    background-size: contain;
+    background-origin: content-box;
     background-repeat: no-repeat;
     background-image: url("/images/BgImg.jpg");
-    
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    @media only screen and (max-width: 768px) {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        background-position: center;
-        background-size: cover;
+    @media (min-width: 480px) and (max-width: 767px) {
+        dispaly: none!important;
+        background-image: url("/images/BgImgM.jpg");
+        position: relative;    
+        overflow: hidden;
+        background-size: contain;
+        background-origin: content-box;
         background-repeat: no-repeat;
+    }
+
+    @media (max-width: 479px) {
+        dispaly: none!important;
         background-image: url("/images/BgImgM.jpg");
     }
 `;
 
-const ParaBg = styled.div`
-    position: relative;
+const ParaBg = styled.section`
+    // margin-top: -164px;
     width: 100vw;
-
-    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     background-image: url("/images/ParaBg.jpg");
-    
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
-
+    background-origin: content-box;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 1.25rem;
-`;
+    flex-flow: row wrap;
 
-const Div = styled.div`
-    width: 83.333333%;
-    display: block;
+    @media (max-width: 768px) {
+        padding: 37px 50px;
+        max-width: 100%;
+        background-size: cover;
+    }
 `;
 
 const Paragraph =styled.p`
     color: #ffffff;
-    font-size: 20px;
+
+    margin: auto;
     text-align: center;
-    display: flex;
-    line-height: 25px;
-    font-weight: 400;
-    font-size: 21px;
-    text-align: center;
-    margin: 0;
+    padding-top: 20px;
+    padding: bottom: 30px;
+    width:665px;
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+        font-size: 21px;
+        width: 100%;
+        padding: 0;
+    }
 `;
 
 export default Header;
