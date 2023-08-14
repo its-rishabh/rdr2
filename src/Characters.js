@@ -66,6 +66,7 @@ const Image = styled.div`
     &:hover {
         color: #ee0000;
     }
+    Overflow: hidden;
 `;
 
 const Image1 = styled.a`
@@ -81,23 +82,26 @@ const Image1 = styled.a`
     transition: 450ms;
     &:hover {
         color: #ee0000;
-    }      
+    }
+    overflow: hidden;
 `;
 
 const Img =styled.img`
     border: 5px;
     
     width: auto;
-    height: 570px;
+    max-height: 570px;
     transition: transform 450ms;
 
     @media only screen and (min-width: 768px) {
         &:hover {
-            transform: scale(1.18);
+            transform: scale(1.08);
         }
     }
 
     @media only screen and (max-width: 768px) {
+        height: 300px;
+        width: auto;
         &:hover {
             transform: scale(1.02);
         }

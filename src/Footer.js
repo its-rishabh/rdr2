@@ -1,21 +1,19 @@
 import React from 'react'
-import './stylesheet.css'
+// import './stylesheet.css'
 import styled from "styled-components";
 
 function Footer() {
   return (
-    <Part4>
-      <h2>Get the latest addition in Red Dead Redemption Series now.</h2>
-    </Part4>
+    <BgImage />
   );
 };
 
- const Part4 = styled.div`
-  color: #ffffff;
-  display: flex;
-  margin: 20px;
-  padding: 20px;
-  justify-content: center;
+const BgImage = styled.div`
+    height: 18rem;
+    background-position: top;
+    background-size: cover;
+    background-image: url("/images/Footer.png");
+    z-index: 20;
 `;
 
 export default Footer;
