@@ -2,3 +2,16 @@ body {
     /* background-color: #191C1F; */
     background-color: black;
 }
+
+*::selection {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-color: red;
+    opacity: 0.3;
+    z-index: -1;
+}

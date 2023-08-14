@@ -1,86 +1,112 @@
 import React from 'react'
-import "./stylesheet.css"
 import { styled } from 'styled-components';
 
 function Characters() {
   return (
     <Part2>
-        <Heading>
-            <h1><b>Characters</b></h1>
-        </Heading>
-        <CharacterProfile>
-            <Image><Img src={require("./images/ArthurMorgan.jpg")} alt="Arthur Morgan" />
-                    <Name><h2>ARTHUR MORGAN</h2></Name>
-            </Image>
-            <Image><Img src={require("./images/illustration_image_2.png")} alt="Sadie Adler" />
-                     <Name><h2>SADIE ADLER</h2></Name>
-            </Image>
-            <Image><Img src={require("./images/illustration_image_3.png")} alt="John Marston" />
-                     <Name><h2>JOHN MARSTON</h2></Name>
-            </Image>
-            <Image><Img src={require("./images/illustration_image_4.png")} alt="Abigail Roberts" />
-                    <Name><h2>ABIGAIL ROBERTS</h2></Name>
-            </Image>
-        </CharacterProfile>
+        <Image>
+            <Img src={require("./images/ArthurMorgan.jpg")} alt="Arthur Morgan" />
+            <Name><h2>PC RELEASE</h2></Name>
+        </Image>
+        <Image>
+            <Img src={require('./images/Dutch.jpg')} alt="Reviews" />
+            <Name><h2>REVIEWS</h2></Name>
+        </Image>
+        <Image>
+            <Img src='./images/RDO.jpg' alt="Red Dead Online" />
+            <Name><h2>RED DEAD ONLINE</h2></Name>
+        </Image>
+        <Image>
+            <Img src='./images/Weaponary.jpg' alt="Weaponary" />
+            <Name><h2>WEAPONRY</h2></Name>
+        </Image>
+        <Image>
+            <Img src={require('./images/SE.jpg')} alt="SPECIAL & ULTIMATE EDITIONS" />
+            <Name><h2>SPECIAL & ULTIMATE EDITIONS</h2></Name>
+        </Image>
+        <Image1 href="https://youtu.be/eaW0tYpxyp0" target="_blank">
+            <Img src="./images/GameplayVideo.jpg" alt="Gameplay Video" />
+            <Name><h2>GAMEPLAY VIDEO PART 2</h2></Name>
+        </Image1>
+        <Image>
+            <Img src={require("./images/VanDerGang.jpg")} alt="THE VAN DER LINDE GANG" />
+            <Name><h2>THE VAN DER LINDE GANG</h2></Name>
+        </Image>
+        <Image>
+            <Img src="./images/Wildlife.jpg" alt="Wildlife" />
+            <Name><h2>WILDLIFE</h2></Name>
+        </Image>
+        <Image>
+            <Img src={require("./images/SoundTrack.jpg")} alt="SOUNDTRACK" />
+            <Name><h2>SOUNDTRACK</h2></Name>
+        </Image>    
     </Part2>
   )
 }
 
 const Part2 = styled.div`
-    border: 5px;
     padding: 15px;
-`;
-
-const Heading = styled.div`
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #ffffff;
-`;
-
-const CharacterProfile = styled.div`
     flex-wrap: wrap;
-    
-    // border: 5px;
-    // border-color: aliceblue;
-
     margin: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 `;
 
 const Image = styled.div`
     padding: 5px;
-    // border: 5px solid #3882f6;
-    // border-radius: 20px;
+    
     margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    color: #ffffff;
     transition: 450ms;
     &:hover {
         color: #ee0000;
-    }    
+    }
+`;
+
+const Image1 = styled.a`
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: 450ms;
+    &:hover {
+        color: #ee0000;
+    }      
 `;
 
 const Img =styled.img`
     border: 5px;
-    border-color: white;
+    
     width: auto;
-    height: 250px;
+    height: 570px;
     transition: transform 450ms;
-    &:hover {
-        transform: scale(1.18);
+
+    @media only screen and (min-width: 768px) {
+        &:hover {
+            transform: scale(1.18);
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        &:hover {
+            transform: scale(1.02);
+        }
     }
 `;
 
 const Name = styled.div`
     margin-top: 25px;
+    font-size: 22px;
 `;
 
 export default Characters;
