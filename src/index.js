@@ -18,23 +18,25 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-style: normal;
     font-display: auto;
-    }
-    * {
-      font-family: 'RgFont';
-      font-weight: bold;
-    }
+  }
 
-    @font-face {
-      font-family: 'PText';
-      src: url(${UniversCondensedTTF}) format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: auto;
-    }
-    p {
-      font-family: 'PText';
-      font-weight: normal;
-    }
+  @font-face {
+    font-family: 'PText';
+    src: url(${UniversCondensedTTF}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+  * {
+    font-family: 'RgFont';
+    font-weight: bold;
+  }    
+  
+  p {
+    font-family: 'PText';
+    font-weight: normal;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

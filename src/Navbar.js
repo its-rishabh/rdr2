@@ -19,7 +19,7 @@ const Bar = styled.div`
     width: 100%;
     height: 40px;
     background-color: black;
-    z-index: 1;
+    z-index: 5;
 `;
 
 const Title = styled.div`

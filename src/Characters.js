@@ -1,45 +1,55 @@
 import React from 'react'
 import { styled } from 'styled-components';
+import SVG from 'react-inlinesvg';
 
 function Characters() {
   return (
     <Part2>
-        <Image>
-            <Img src={require("./images/ArthurMorgan.jpg")} alt="Arthur Morgan" />
-            <Name><h2>PC RELEASE</h2></Name>
-        </Image>
-        <Image>
-            <Img src={require('./images/Dutch.jpg')} alt="Reviews" />
-            <Name><h2>REVIEWS</h2></Name>
-        </Image>
-        <Image>
-            <Img src='./images/RDO.jpg' alt="Red Dead Online" />
-            <Name><h2>RED DEAD ONLINE</h2></Name>
-        </Image>
-        <Image>
-            <Img src='./images/Weaponary.jpg' alt="Weaponary" />
-            <Name><h2>WEAPONRY</h2></Name>
-        </Image>
-        <Image>
-            <Img src={require('./images/SE.jpg')} alt="SPECIAL & ULTIMATE EDITIONS" />
-            <Name><h2>SPECIAL & ULTIMATE EDITIONS</h2></Name>
-        </Image>
-        <Image1 href="https://youtu.be/eaW0tYpxyp0" target="_blank">
-            <Img src="./images/GameplayVideo.jpg" alt="Gameplay Video" />
-            <Name><h2>GAMEPLAY VIDEO PART 2</h2></Name>
-        </Image1>
-        <Image>
-            <Img src={require("./images/VanDerGang.jpg")} alt="THE VAN DER LINDE GANG" />
+        <Container>
+            <Image src={require("./images/ArthurMorgan.jpg")} alt="Arthur Morgan" />
+            <SvgFrame src='./images/ArthurBg.svg' />
+            {/* <Name><h2>PC RELEASE</h2></Name> */}
+        </Container>
+        <Container>
+            <Image src={require('./images/Dutch.jpg')} alt="Reviews" />
+            <SvgFrame src='./images/ReviewBg.svg' />
+            {/* <Name><h2>REVIEWS</h2></Name> */}
+        </Container>
+        <Container>
+            <Image src='./images/RDO.jpg' alt="Red Dead Online" />
+            <SvgFrame src='./images/RDOBg.svg' />
+            {/* <Name><h2>RED DEAD ONLINE</h2></Name> */}
+        </Container>
+        <Container>
+            <Image src='./images/Weaponary.jpg' alt="Weaponary" />
+            <SvgFrame src='./images/WeaponaryBg.svg' />
+            {/* <Name><h2>WEAPONRY</h2></Name> */}
+        </Container>
+        <Container>
+            <Image src={require('./images/SE.jpg')} alt="SPECIAL & ULTIMATE EDITIONS" />
+            <SvgFrame src='./images/SEBg.svg' />
+            {/* <Name><h2>SPECIAL & ULTIMATE EDITIONS</h2></Name> */}
+        </Container>
+        <Container href="https://youtu.be/eaW0tYpxyp0" target="_blank">
+            <Image src="./images/GameplayVideo.jpg" alt="Gameplay Video" />
+            <SvgFrame src='./images/GameplayBg.svg' />
+            {/* <Name><h2>GAMEPLAY VIDEO PART 2</h2></Name> */}
+        </Container>
+        <Container><div>
+            <Image src={require("./images/VanDerGang.jpg")} alt="THE VAN DER LINDE GANG" />
+            <SvgFrame src='./images/GangBg.svg' /></div>
             <Name><h2>THE VAN DER LINDE GANG</h2></Name>
-        </Image>
-        <Image>
-            <Img src="./images/Wildlife.jpg" alt="Wildlife" />
+        </Container>
+        <Container>
+            <Image src="./images/Wildlife.jpg" alt="Wildlife" />
+            <SvgFrame src='./images/WildlifeBg.svg' />
             <Name><h2>WILDLIFE</h2></Name>
-        </Image>
-        <Image>
-            <Img src={require("./images/SoundTrack.jpg")} alt="SOUNDTRACK" />
+        </Container>
+        <Container>
+            <Image src={require("./images/SoundTrack.jpg")} alt="SOUNDTRACK" />
+            <SvgFrame src='./images/SoundTrackBg.svg' />
             <Name><h2>SOUNDTRACK</h2></Name>
-        </Image>    
+        </Container>    
     </Part2>
   )
 }
@@ -55,61 +65,49 @@ const Part2 = styled.section`
     overflow: hidden;
 `;
 
-const Image = styled.div`
-    padding: 5px;
+const Container = styled.a`
+    position: relative;
     
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    transition: 450ms;
-    &:hover {
-        color: #ee0000;
-    }
-    Overflow: hidden;
-`;
-
-const Image1 = styled.a`
     text-decoration: none;
     color: #ffffff;
-    padding: 5px;
-    
+
     margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    transition: 450ms;
+    transition: transform 450ms;
     &:hover {
         color: #ee0000;
-    }
-    overflow: hidden;
-`;
-
-const Img =styled.img`
-    border: 5px;
-    
-    width: auto;
-    max-height: 570px;
-    transition: transform 450ms;
-
-    @media only screen and (min-width: 768px) {
-        &:hover {
+        img{
             transform: scale(1.08);
         }
     }
+    Overflow: hidden;
 
     @media only screen and (max-width: 768px) {
-        height: 300px;
-        width: auto;
         &:hover {
-            transform: scale(1.02);
+            img {transform: scale(1.02);}
         }
     }
 `;
 
-const Name = styled.div`
+const Image =styled.img`
+    display: block;    
+    width: auto;
+    max-height: 570px;
+    transition: transform 450ms;
+`;
+
+const SvgFrame = styled(SVG)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const Name = styled.span`
     margin-top: 25px;
     font-size: 22px;
 `;

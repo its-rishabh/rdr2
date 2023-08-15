@@ -5,15 +5,14 @@ function Header() {
   return (
     <>
     <BgImage />
-    {/* <Join /> */}
     <ParaBg>
         <Paragraph>
-            <p>America, 1899. The end of the Wild West era has begun. After a robbery goes badly wrong in 
+            America, 1899. The end of the Wild West era has begun. After a robbery goes badly wrong in 
             the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. 
             With federal agents and the best bounty hunters in the nation massing on their heels, 
             the gang must rob, steal and fight their way across the rugged heartland of America 
             in order to survive. As deepening internal divisions threaten to tear the gang apart, 
-            Arthur must make a choice between his own ideals and loyalty to the gang who raised him.</p>
+            Arthur must make a choice between his own ideals and loyalty to the gang who raised him.
         </Paragraph>
     </ParaBg>
     </>
@@ -48,7 +47,6 @@ const BgImage = styled.section`
 `;
 
 const ParaBg = styled.section`
-    // margin-top: -164px;
     width: 100vw;
     background-size: cover;
     background-image: url("/images/ParaBg.jpg");
@@ -71,7 +69,7 @@ const Paragraph =styled.p`
     padding-top: 20px;
     padding: bottom: 30px;
     width:665px;
-    font-size: 18px;
+    font-size: 19px;
 
     @media (max-width: 768px) {
         font-size: 21px;
